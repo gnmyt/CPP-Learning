@@ -7,10 +7,7 @@ using namespace std;
 class TikTakToe {
 
 public:
-    string rows[9] = {
-            "-", "-", "-",
-            "-", "-", "-",
-            "-", "-", "-"};
+    string rows[9] = {"-", "-", "-","-", "-", "-","-", "-", "-"};
 
 public:
     bool playerWon(string character) {
@@ -53,12 +50,13 @@ public:
 
             cout << rows[i] + " ";
         }
-        cout << "\n=====\nWo soll dein X hin? [1-9] ";
     }
 
 public:
     void awaitInput() {
         printBoard();
+
+        cout << "\n=====\nWo soll dein X hin? [1-9] ";
 
         int input;
         cin >> input;
@@ -80,15 +78,19 @@ int main() {
         board.awaitInput();
     }
 
-    cout << "\n===== ENDSTAND =====";
+    cout << "\n===== ENDSTAND ";
 
     board.printBoard();
+
+    cout << "\n===== ENDSTAND =====";
 
     if (board.playerWon("X")) {
         cout << "\n\nDu hast gewonnen! Herzlichen Glückwunsch. :)";
     } else {
         cout << "Du hast legit gegen einen random Bot verloren, würd mir mal Gedanken machen..";
     }
+
+    cout << "\n\n";
 
 
     return 0;
