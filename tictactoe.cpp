@@ -6,6 +6,8 @@ using namespace std;
 
 class TikTakToe {
 
+public: bool botGame = true;
+
 public:
     string rows[9] = {"-", "-", "-","-", "-", "-","-", "-", "-"};
 
@@ -53,10 +55,10 @@ public:
     }
 
 public:
-    void awaitInput() {
+    void awaitInput(string player) {
         printBoard();
 
-        cout << "\n=====\nWo soll dein X hin? [1-9] ";
+        cout << "\n=====\nWo soll dein " << player << " hin? [1-9] ";
 
         int input;
         cin >> input;
@@ -66,28 +68,38 @@ public:
             return;
         }
 
-        rows[input - 1] = "X";
-        generateMove();
+        rows[input - 1] = player;
+
+        if (botGame) generateMove();
     }
 };
 
 int main() {
     TikTakToe board;
 
+    cout << "Möchtest du gegen einen Bot [1] oder einen lokalen Gegner [2] spielen?: ";
+    string in;
+    cin >> in;
+
+    if (in == "2") board.botGame = false;
+
     while (!(board.playerWon("X") || board.playerWon("O"))) {
-        board.awaitInput();
+        board.awaitInput("X");
+        if (!board.botGame && !board.playerWon("X")) board.awaitInput("O");
     }
 
     cout << "\n===== ENDSTAND ";
 
     board.printBoard();
 
-    cout << "\n===== ENDSTAND =====";
+    cout << "\n===== ENDSTAND =====\n\n";
 
-    if (board.playerWon("X")) {
-        cout << "\n\nDu hast gewonnen! Herzlichen Glückwunsch. :)";
-    } else {
+    if (board.playerWon("X") && board.botGame) {
+        cout << "Du hast gewonnen! Herzlichen Glückwunsch. :)";
+    } else if (board.botGame) {
         cout << "Du hast legit gegen einen random Bot verloren, würd mir mal Gedanken machen..";
+    } else {
+        cout << (board.playerWon("X") ? "X" : "O") << " hat gewonnen. Glückwunsch!";
     }
 
     cout << "\n\n";
