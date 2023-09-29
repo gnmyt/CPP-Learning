@@ -1,0 +1,51 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y build-essential
+
+      - name: Find all C++ files
+        run: |
+          find . -name "*.cpp" | sort > files.txt
+
+      - name: Build executables
+        run: |
+          for file in $(cat files.txt); do
+            g++ -o $file-${{ github.ref_name[:4] }} $file
+          done
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Create release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ github.ref_name[:4] }}
+          release_name: Release ${{ github.ref_name[:4] }}
+          body: |
+            This is the release ${{ github.ref_name[:4] }}.
+
+          draft: false
+          prerelease: false
+
+      - name: Upload executables
+        uses: actions/upload-artifact@v2
+        with:
+          name: executables
+          path: |
+            $(cat files.txt)-${{ github.ref_name[:4] }}
