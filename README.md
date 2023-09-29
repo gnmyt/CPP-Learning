@@ -7,8 +7,8 @@ In diesem Ordner befinden sich alle Übungen, welche wir in der Schule bewältig
 ## Anwendungen
 
 📂 Games  
-┃ ┗ 📜 [Rock Paper Scissors](rpc.cpp)  
-┃ ┗ 📜 [Tic Tac Toe](tictactoe.cpp)  
-┣ 📂 Miscellaneous  
-┃ ┗ 📜 [Number Guesser](guesser.cpp)  
-┃ ┗ 📜 [Calculator](calculator.cpp)  
+┗ 📜 [Rock Paper Scissors](rpc.cpp)  
+┗ 📜 [Tic Tac Toe](tictactoe.cpp)  
+📂 Miscellaneous  
+┗ 📜 [Number Guesser](guesser.cpp)  
+┗ 📜 [Calculator](calculator.cpp)  
