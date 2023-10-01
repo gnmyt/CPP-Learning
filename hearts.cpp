@@ -58,6 +58,9 @@ int main(int argc, char *argv[]) {
                     case SDLK_d: case SDLK_RIGHT:
                         ballX+=3;
                         break;
+                    case SDLK_ESCAPE:
+                        gameRunning = false;
+                        break;
                 }
             }
 
