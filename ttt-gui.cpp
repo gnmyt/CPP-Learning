@@ -79,8 +79,6 @@ void render(SDL_Renderer *renderer, SDL_Texture *bg) {
             int posX = ((i - 1) % 3) * (WINDOW_SIZE / 3) + 32;
             int posY = ((i - 1) / 3) * (WINDOW_SIZE / 3) + 32;
 
-            cout << posX << " " << posY << "\n";
-
             SDL_Rect srcO;
             srcO.x = 0;
             srcO.y = 0;
