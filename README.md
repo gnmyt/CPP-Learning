@@ -9,7 +9,7 @@ In diesem Ordner befinden sich alle Übungen, welche wir in der Schule bewältig
 📂 Games  
 ┗ 📜 [Rock Paper Scissors](rpc.cpp)  
 ┗ 📜 [Tic Tac Toe](tictactoe.cpp)  
-┗ 📜 [Hearts](hearts.cpp)
+┗ 📜 [Hearts](hearts.cpp)  
 📂 Miscellaneous  
 ┗ 📜 [Number Guesser](guesser.cpp)  
 ┗ 📜 [Calculator](calculator.cpp)  
