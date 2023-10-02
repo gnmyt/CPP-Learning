@@ -2,6 +2,8 @@
 #include <SDL2/SDL_image.h>
 #include <vector>
 
+// Compiler options: -Llib -lSDL2 -lSDL2main -lSDL2_image
+
 using namespace std;
 
 int ballX = 0;
