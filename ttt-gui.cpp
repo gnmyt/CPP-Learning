@@ -28,6 +28,7 @@ bool playerWon(string character) {
 }
 
 void generateOpponent() {
+    if (playerWon("X") || playerWon("O")) return;
     int random = rand() % 10;
 
     if (rows[random] != "-") {
@@ -72,12 +73,12 @@ void render(SDL_Renderer *renderer, SDL_Texture *bg) {
 
     SDL_RenderCopy(renderer, bg, &src, &dist);
 
-    for (int i = 1; i < 10; ++i) {
-        string row = rows[i-1];
+    for (int i = 0; i < 9; ++i) {
+        string row = rows[i];
 
         if (row != "-") {
-            int posX = ((i - 1) % 3) * (WINDOW_SIZE / 3) + 32;
-            int posY = ((i - 1) / 3) * (WINDOW_SIZE / 3) + 32;
+            int posX = (i  % 3) * (WINDOW_SIZE / 3) + 32;
+            int posY = (i / 3) * (WINDOW_SIZE / 3) + 32;
 
             SDL_Rect srcO;
             srcO.x = 0;
