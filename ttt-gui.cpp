@@ -112,9 +112,8 @@ int main() {
         while (SDL_PollEvent(&event)) {
             if (playerWon("X") || playerWon("O")) state = 1;
 
-
             if (event.type == SDL_QUIT) gameOpen = false;
-            if (event.type == SDL_MOUSEBUTTONUP) {
+            if (event.type == SDL_MOUSEBUTTONUP && state == 0) {
                 int mouseX;
                 int mouseY;
                 SDL_GetMouseState(&mouseX, &mouseY);
