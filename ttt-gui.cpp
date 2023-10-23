@@ -29,9 +29,11 @@ bool playerWon(string character) {
 
 void generateOpponent() {
     if (playerWon("X") || playerWon("O")) return;
-    int random = rand() % 10;
+    srand(time(0));
+    int random = rand() % 9;
 
     if (rows[random] != "-") {
+        SDL_Delay(100);
         generateOpponent();
         return;
     }
@@ -126,7 +128,7 @@ int main() {
                 if (rows[pos-1] == "-") {
                     rows[pos-1] = "X";
                     render(renderer, background);
-                    SDL_Delay(500);
+                    SDL_Delay(300);
                     generateOpponent();
                 }
             }
