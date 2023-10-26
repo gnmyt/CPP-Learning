@@ -85,3 +85,33 @@ Nettowarenwert  :    45.00 Euro
 ```
 
 ### 📜 [Solution](solution_3.cpp)
+
+## 🏅 Aufgabe 4
+
+Ein Bauartikelhändler gewährt seinen Kunden beim Kauf von Dachziegeln Mengenrabatt.
+
+| Einkaufsmenge  | Rabatt |
+|----------------|--------|
+| bis 500 Stück  | 2 %    |
+| bis 1000 Stück | 5 %    |
+| darüber        | 10 %   |
+
+Kunden mit einer Geschäftsbeziehung von mehr als 10 Jahren und einer Menge von mehr als 1.000 Stück erhalten einen
+zusätzlichen Rabatt von 5 %.
+Schreiben Sie ein Programm, das nach Eingabe des Preises/Stück, der Menge und der Dauer der Geschäftsbeziehung den
+Rabatt ermittelt und diesen ausgibt. Erstellen Sie zunächst ein Struktogramm!
+
+Eingabedaten: Menge, Stückpreis, Dauer der Geschäftsbeziehung
+Ausgabedaten: Rabatt in %, Rabatt in Euro
+
+Beispiel:
+
+```shell
+Geben Sie die Anzahl ein:  1000
+Geben Sie den Stueckpreis ein:  1.2
+Geben Sie die Dauer der Geschaeftsbeziehung ein:  10
+
+Sie erhalten 5 % Rabatt.
+
+Der Rabatt betraegt:  60.00 Euro.
+```
