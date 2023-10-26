@@ -33,11 +33,13 @@ int main() {
     cout.setf(ios::fixed);
     cout.precision(2);
 
-    cout << "Warenwert   :  " << Warenwert << " Euro" << endl;
-    cout << "Rabatt (" << (Rabatt * 100) << "%)   :  " << (Warenwert * Rabatt) << endl;
-    cout << "-----------------------------------------------------------------------------------------" << endl;
-    cout << "Nettobetrag   :  " << Netto << endl;
-    cout << "Umsatzsteuer   :   " << Umsatz << endl;
-    cout << "-----------------------------------------------------------------------------------------" << endl;
-    cout << "Bruttobetrag   : " << Brutto << endl;
+    cout << endl;
+
+    cout << "Warenwert       :  " << Warenwert << " Euro" << endl;
+    cout << "Rabatt (" << (Rabatt * 100) << "%) :  " << (Warenwert * Rabatt) << " Euro" << endl;
+    cout << "------------------------------" << endl;
+    cout << "Nettobetrag    :  " << Netto << " Euro" << endl;
+    cout << "Umsatzsteuer   :  " << Umsatz << " Euro" << endl;
+    cout << "------------------------------" << endl;
+    cout << "Bruttobetrag   :  " << Brutto << " Euro" << endl;
 }
