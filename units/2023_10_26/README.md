@@ -31,6 +31,7 @@ Eingabedaten: Anzahl der Mäuse, Preis je Maus
 Ausgabedaten: Warenwert, Rabatt in % und Euro, Nettobetrag, Umsatzsteuer, Bruttobetrag
 
 Beispiel:
+
 ```shell
 Geben Sie die Anzahl der Maeuse ein:  5
 Geben Sie den Einzelpreis ein:  10
@@ -45,3 +46,42 @@ Bruttobetrag   :  53.55 Euro
 ```
 
 ### 📜 [Solution](solution_2.cpp)
+
+## 🥉 Aufgabe 3
+
+Der bereits erwähnte Hardware-Großhändler liefert frei Haus, wenn die Bestellmenge bei mindestens 10 Mäusen liegt, bei
+einer geringeren Bestellmenge berechnet er eine Transportpauschale von 10,00 €.
+Erstellen Sie zunächst ein Struktogramm! Schreiben Sie ein entsprechendes Programm!
+
+Eingabedaten: Anzahl der Mäuse, Preis je Maus
+Ausgabedaten: Nettowarenwert, Transportpauschale, Umsatzsteuer, Bruttobetrag
+
+Beispiel:
+
+```shell
+Geben Sie die Anzahl der PC-Maeuse ein: 10
+
+Geben sie den Einzelpreis ein: 10
+
+Nettowarenwert  :  100.00 Euro
++ Transportpauschale  :     0.00 Euro
++ Umsatzsteuer  :   19.00 Euro
+-----------------------------------------------------------------
+= Bruttobetrag  : 119.00 Euro
+```
+
+Beispiel:
+
+```shell
+Geben Sie die Anzahl der PC-Maeuse ein: 9
+
+Geben sie den Einzelpreis ein: 5
+
+Nettowarenwert  :    45.00 Euro
++ Transportpauschale  :   10.00 Euro
++ Umsatzsteuer  :   10.45 Euro
+-----------------------------------------------------------------
+= Bruttobetrag  :   65.45 Euro
+```
+
+### 📜 [Solution](solution_3.cpp)
