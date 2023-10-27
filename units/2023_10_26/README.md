@@ -115,3 +115,42 @@ Sie erhalten 5 % Rabatt.
 
 Der Rabatt betraegt:  60.00 Euro.
 ```
+
+### 📜 [Solution](solution_4.cpp)
+
+## 🎖 Aufgabe 5
+
+Der Hardware-Händler ändert seine Konditionen. Er gewährt seinen Kunden einen Treuerabatt. Hierfür hat er alle Kunden in
+Kategorien eingeteilt und gewährt folgende Rabatte:
+
+| Kategorie | Rabatt |
+|-----------|--------|
+| 1         | 10 %   |
+| 2         | 12 %   |
+| 3         | 15 %   |
+| 4         | 20 %   |
+| 5         | 30 %   |
+| andere    | 0 %    |
+
+Erstellen Sie zunächst ein Struktogramm!
+
+Eingabedaten: Anzahl der Mäuse, Preis je Maus, Kundenkategorie
+Ausgabedaten: Warenwert, Rabatt in % und Euro, Nettobetrag, Umsatzsteuer, Bruttobetrag
+
+Beispiel:
+
+```shell
+Geben Sie die Anzahl der Maeuse ein:  50
+Geben Sie den Einzelpreis ein:  10
+Geben Sie die Kundenkategorie ein:  3
+
+Warenwert  : 500.00 Euro
+Rabatt (15.00 %) :   75.00 Euro
+----------------------------------------------------------------------
+Nettobetrag  : 425.00 Euro
+Umsatzsteuer  :   80.75 Euro
+----------------------------------------------------------------------
+Bruttobetrag  : 505.75 Euro
+```
+
+### 📜 [Solution](solution_5.cpp)
