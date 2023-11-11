@@ -2,7 +2,7 @@
 
 Anwendungen, die ich für das Lernen von C++ geschrieben habe
 
-## Schulübungen
+## [Schulübungen](units)
 
 In diesem Ordner befinden sich alle Übungen, welche wir in der Schule bewältigt haben.
 
