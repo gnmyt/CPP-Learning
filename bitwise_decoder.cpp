@@ -3,23 +3,17 @@
 
 using namespace std;
 
+#define MAX_INVENTORY_SIZE 10
+
 class ItemManager {
-private:
-    std::vector<int> availableItems;
-
 public:
-    ItemManager() {
-        availableItems = {1 << 0, 1 << 1, 1 << 2, 1 << 3, 1 << 4, 1 << 5, 1 << 6, 1 << 7, 1 << 8, 1 << 9};
-    }
-
     bool isActivated(int index, int activatedItems) {
-        return index >= 0 && index < availableItems.size() &&
-               (activatedItems & availableItems[index]) == availableItems[index];
+        return index >= 0 && index < MAX_INVENTORY_SIZE && (activatedItems & (1 << index)) == (1 << index);
     }
 
     std::vector<int> getInventory(int activatedItems) {
         std::vector<int> activated;
-        for (size_t i = 0; i < availableItems.size(); ++i)
+        for (size_t i = 0; i < MAX_INVENTORY_SIZE; i++)
             if (isActivated(i, activatedItems)) activated.push_back(i + 1);
 
         return activated;
