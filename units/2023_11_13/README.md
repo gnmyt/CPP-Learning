@@ -23,7 +23,7 @@ Geben Sie Ihren Ort ein (1=Aschaffenburg, 2=Frankfurt, 3=sonstiger Ort): 3
 Geben Sie die Anzahl Ihrer Kinder ein: 4
 Geben Sie Ihr Geschlecht ein (1 = weiblich, 2 = maennlich):  2
 
-Sie erhalten einen Gutschein im Wert von 50 Euro.
+Sie erhalten einen Gutschein im Wert von 50 Euro. 
 ```
 
 ```shell
