@@ -10,15 +10,12 @@ int main() {
 
     getline(cin, input);
 
-    vector<string> parts;
-    boost::split(parts, input, boost::is_any_of(" "));
-
-    cout << parts[0] << " - Länderkennziffer (40 = Deutschland)" << endl;
-    cout << parts[1] << " - Kennzeichen des Herstellers" << endl;
-    cout << parts[2] << "- Produktkennziffer" << endl;
-    cout << parts[3] << " - Prüfziffer" << endl;
-
     input.erase(std::remove_if(input.begin(), input.end(), ::isspace), input.end());
+
+    cout << input.substr(0, 2)  << " - Länderkennziffer (40 = Deutschland)" << endl;
+    cout << input.substr(2, 5)  << " - Kennzeichen des Herstellers" << endl;
+    cout << input.substr(7, 5) << "- Produktkennziffer" << endl;
+    cout << input[12] << " - Prüfziffer" << endl;
 
     for (int i = 0; i < 12; i += 2) {
         summe1 += (input[i] - '0');
