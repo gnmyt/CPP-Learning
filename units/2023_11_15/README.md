@@ -38,3 +38,5 @@ Gesamtsumme: 61
 Differenz zu 70 = 9
 9 ist die Prüfziffer
 ```
+
+### 📜 [Solution](solution_2.cpp)
