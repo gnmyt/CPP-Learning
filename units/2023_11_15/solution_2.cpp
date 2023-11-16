@@ -1,21 +1,23 @@
 #include <iostream>
-#include <boost/algorithm/string/split.hpp>
 #include <boost/algorithm/string/classification.hpp>
 
 using namespace std;
 
 int main() {
     string input;
-    int summe1, summe2, gesamt;
+    long summe1, summe2, gesamt;
 
     getline(cin, input);
 
-    input.erase(std::remove_if(input.begin(), input.end(), ::isspace), input.end());
+    input.erase(remove_if(input.begin(), input.end(), ::isspace), input.end());
 
     cout << input.substr(0, 2)  << " - Länderkennziffer (40 = Deutschland)" << endl;
     cout << input.substr(2, 5)  << " - Kennzeichen des Herstellers" << endl;
     cout << input.substr(7, 5) << "- Produktkennziffer" << endl;
     cout << input[12] << " - Prüfziffer" << endl;
+
+    summe1 = 0;
+    summe2 = 0;
 
     for (int i = 0; i < 12; i += 2) {
         summe1 += (input[i] - '0');
