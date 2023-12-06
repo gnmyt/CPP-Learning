@@ -9,7 +9,7 @@ using namespace std;
 int main() {
     ifstream input("input.txt");
 
-    int sums;
+    int sums = 0;
     for (string line; getline(input, line);) {
         regex e("Card\\s*[0-9]+: (.*)");
         smatch m;
