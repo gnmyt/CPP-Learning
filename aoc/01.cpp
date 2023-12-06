@@ -26,7 +26,7 @@ int main() {
                 size_t index = current_str.find(item.second);
 
                 while(index != std::string::npos){
-                    current_str.replace(index, item.second.length(), item.first);
+                    current_str.replace(index, item.second.length() - 1, item.first);
                     index = current_str.find(item.second);
                 }
             }
